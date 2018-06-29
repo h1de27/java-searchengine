@@ -1,29 +1,31 @@
 package search.models;
 
-import com.chimbori.crux.articles.Article;
-import com.chimbori.crux.articles.ArticleExtractor;
-import datastructures.concrete.DoubleLinkedList;
-import datastructures.concrete.dictionaries.ChainedHashDictionary;
-import datastructures.interfaces.IDictionary;
-import datastructures.interfaces.IList;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import search.misc.UnbufferedReader;
-import search.misc.WebUtils;
-import search.misc.WordTokenizer;
-import search.misc.exceptions.DataExtractionException;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.InputStream;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PushbackInputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.StringTokenizer;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import com.chimbori.crux.articles.Article;
+import com.chimbori.crux.articles.ArticleExtractor;
+
+import datastructures.concrete.DoubleLinkedList;
+import datastructures.concrete.dictionaries.ChainedHashDictionary;
+import datastructures.interfaces.IDictionary;
+import datastructures.interfaces.IList;
+import search.misc.UnbufferedReader;
+import search.misc.WebUtils;
+import search.misc.WordTokenizer;
+import search.misc.exceptions.DataExtractionException;
 
 /**
  * This class represents a single webpage.
