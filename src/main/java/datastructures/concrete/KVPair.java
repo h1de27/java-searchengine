@@ -7,7 +7,6 @@ package datastructures.concrete;
  * change the key or value within this pair.
  */
 public class KVPair<K, V> {
-    // Implementation note: you may NO"T modify this class.
 
     private K key;
     private V value;

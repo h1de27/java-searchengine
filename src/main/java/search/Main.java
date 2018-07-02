@@ -6,7 +6,7 @@ public class Main {
     public static final String DATA_FOLDER_NAME = "Wikipedia";
 
     // The name of your search engine (feel free to change this).
-    public static final String SITE_TITLE = "Noodle";
+    public static final String SITE_TITLE = "Noodle (Not goole)";
 
     // The port to serve your web server on.
     // You can ignore this constant. If you're familiar with web development

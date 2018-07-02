@@ -12,15 +12,14 @@ import java.util.NoSuchElementException;
 import misc.exceptions.NoSuchKeyException;
 
 /**
- * See IDictionary for more details on what this class should do
+ * Use IDictionary as interfaces.
  */
 public class ArrayDictionary<K, V> implements IDictionary<K, V> {
-    // You may not change or rename this field: we will be inspecting
-    // it using our private tests.
+
     private Pair<K, V>[] pairs;
     private int size;
 
-    // You're encouraged to add extra fields (and helper methods) though!
+
 
     public ArrayDictionary() {
         this.size = 0;
@@ -175,7 +174,7 @@ public class ArrayDictionary<K, V> implements IDictionary<K, V> {
         public K key;
         public V value;
 
-        // You may add constructors and methods to this class as necessary.
+        
         public Pair(K key, V value) {
             this.key = key;
             this.value = value;
