@@ -20,7 +20,9 @@ public class ArrayDictionary<K, V> implements IDictionary<K, V> {
     private int size;
 
 
-
+    /**
+     * This method initializes the ArrayDictionary constructor.
+     */
     public ArrayDictionary() {
         this.size = 0;
         this.pairs = makeArrayOfPairs(1);
@@ -174,7 +176,7 @@ public class ArrayDictionary<K, V> implements IDictionary<K, V> {
         public K key;
         public V value;
 
-        
+
         public Pair(K key, V value) {
             this.key = key;
             this.value = value;

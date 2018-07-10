@@ -31,13 +31,6 @@ public class PageRankAnalyzer {
      *                  page rank never converges.
      */
     public PageRankAnalyzer(ISet<Webpage> webpages, double decay, double epsilon, int limit) {
-        // Implementation note: We have commented these method calls out so your
-        // search engine doesn't immediately crash when you try running it for the
-        // first time.
-        //
-        // You should uncomment these lines when you're ready to begin working
-        // on this class.
-
         // Step 1: Make a graph representing the 'internet'
         IDictionary<URI, ISet<URI>> graph = this.makeGraph(webpages);
 

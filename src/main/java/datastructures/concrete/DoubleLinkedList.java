@@ -16,12 +16,18 @@ public class DoubleLinkedList<T> implements IList<T> {
     private Node<T> back;
     private int size;
 
+    /**
+     * Initialize fields.
+     */
     public DoubleLinkedList() {
         this.front = null;
         this.back = null;
         this.size = 0;
     }
 
+    /**
+     * Add the given item to the doubly linked list.
+     */
     @Override
     public void add(T item) {
         if (this.size == 0) {
@@ -36,6 +42,9 @@ public class DoubleLinkedList<T> implements IList<T> {
         size++;
     }
 
+    /**
+     * Remove the given item from the doubly linked list.
+     */
     @Override
     public T remove() {
         T data;
@@ -56,6 +65,9 @@ public class DoubleLinkedList<T> implements IList<T> {
         return data;
     }
 
+    /**
+     * Get the data corresponding with the given index.
+     */
     @Override
     public T get(int index) {
         if (index < 0 || index >= this.size()) {
@@ -66,6 +78,9 @@ public class DoubleLinkedList<T> implements IList<T> {
         }
     }
 
+    /**
+     * Set the given item into the given index of the doubly linked list.
+     */
     @Override
     public void set(int index, T item) {
         if (index < 0 || index >= this.size()) {
@@ -86,6 +101,9 @@ public class DoubleLinkedList<T> implements IList<T> {
         }
     }
 
+    /**
+     * Intert the given item into the given index of the doubly linked list.
+     */
     @Override
     public void insert(int index, T item) {
         if (index < 0 || index >= this.size() + 1) {
@@ -115,6 +133,9 @@ public class DoubleLinkedList<T> implements IList<T> {
         size++;
     }
 
+    /**
+     * Delete the item in the given index.
+     */
     @Override
     public T delete(int index) {
         if (index < 0 || index >= this.size()) {
@@ -138,6 +159,9 @@ public class DoubleLinkedList<T> implements IList<T> {
         return current.data;
     }
 
+    /**
+     * Return the index of the given number.
+     */
     @Override
     public int indexOf(T item) {
         Node<T> temp = this.front;
@@ -153,11 +177,17 @@ public class DoubleLinkedList<T> implements IList<T> {
         return -1;
     }
 
+    /**
+     * Return the size.
+     */
     @Override
     public int size() {
         return this.size;
     }
 
+    /**
+     * Check if the doubly linked list contains other doubly linkes list.
+     */
     @Override
     public boolean contains(T other) {
         Node<T> temp = this.front;
@@ -171,12 +201,18 @@ public class DoubleLinkedList<T> implements IList<T> {
         return false;
     }
 
+    /**
+     * Create iterator.
+     */
     @Override
     public Iterator<T> iterator() {
 
         return new DoubleLinkedListIterator<>(this.front);
     }
 
+    /**
+     * Return node that corresponds with the given index.
+     */
     private Node<T> getNode(int index) {
         Node<T> temp;
         if (index < 0 || index >= size) {
@@ -196,6 +232,9 @@ public class DoubleLinkedList<T> implements IList<T> {
         return temp;
     }
 
+    /**
+     * Inner class of nodes of doubly linked list.
+     */
     private static class Node<E> {
 
         public final E data;
@@ -220,7 +259,7 @@ public class DoubleLinkedList<T> implements IList<T> {
         private Node<T> current;
 
         public DoubleLinkedListIterator(Node<T> current) {
-            
+
             this.current = current;
         }
 
