@@ -20,6 +20,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class SearchEngine {
+    // fields
     public static final double PAGE_RANK_DECAY = 0.85;
     public static final double PAGE_RANK_EPSILON = 0.0001;
     public static final int PAGE_RANK_ITERATION_LIMIT = 200;
@@ -47,6 +48,7 @@ public class SearchEngine {
         end = System.currentTimeMillis() - start;
         System.out.println("Done indexing (" + (end / 1000.0) + " sec)");
     }
+
 
     public double computeScore(IList<String> query, URI uri) {
         double tfIdf = this.tfIdfAnalyzer.computeRelevance(query, uri);
@@ -82,6 +84,7 @@ public class SearchEngine {
         return tfIdf * Math.sqrt(pageRank);
     }
 
+
     public IList<Result> getTopKResults(IList<String> query, int k) {
         IList<Result> results = new DoubleLinkedList<>();
 
@@ -99,6 +102,7 @@ public class SearchEngine {
 
         return reversed;
     }
+
 
     private ISet<Webpage> collectWebpages(Path root) {
         try {
